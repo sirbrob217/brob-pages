@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_from": "v3.2.0",
+  "generated_from": "v3.3.1",
   "server_aliases": [
     {
       "key": "all-installed-servers",
@@ -273,191 +273,6 @@
           ],
           "type": "chat_input",
           "options": [],
-          "subcommands": []
-        },
-        {
-          "path": "misc/timestamp",
-          "name": "/misc timestamp",
-          "category": "General",
-          "description": "Build a Discord timestamp for a local date and time.",
-          "permission": "user",
-          "availability": "Selected Discord servers",
-          "server_keys": [
-            "the-boys",
-            "wednesday-gang",
-            "eternal-defiance"
-          ],
-          "type": "chat_input",
-          "options": [
-            {
-              "name": "hour",
-              "description": "Local hour",
-              "type": "integer",
-              "required": true,
-              "choices": [
-                {
-                  "name": "12:00 AM",
-                  "value": 0
-                },
-                {
-                  "name": "1:00 AM",
-                  "value": 1
-                },
-                {
-                  "name": "2:00 AM",
-                  "value": 2
-                },
-                {
-                  "name": "3:00 AM",
-                  "value": 3
-                },
-                {
-                  "name": "4:00 AM",
-                  "value": 4
-                },
-                {
-                  "name": "5:00 AM",
-                  "value": 5
-                },
-                {
-                  "name": "6:00 AM",
-                  "value": 6
-                },
-                {
-                  "name": "7:00 AM",
-                  "value": 7
-                },
-                {
-                  "name": "8:00 AM",
-                  "value": 8
-                },
-                {
-                  "name": "9:00 AM",
-                  "value": 9
-                },
-                {
-                  "name": "10:00 AM",
-                  "value": 10
-                },
-                {
-                  "name": "11:00 AM",
-                  "value": 11
-                },
-                {
-                  "name": "12:00 PM",
-                  "value": 12
-                },
-                {
-                  "name": "1:00 PM",
-                  "value": 13
-                },
-                {
-                  "name": "2:00 PM",
-                  "value": 14
-                },
-                {
-                  "name": "3:00 PM",
-                  "value": 15
-                },
-                {
-                  "name": "4:00 PM",
-                  "value": 16
-                },
-                {
-                  "name": "5:00 PM",
-                  "value": 17
-                },
-                {
-                  "name": "6:00 PM",
-                  "value": 18
-                },
-                {
-                  "name": "7:00 PM",
-                  "value": 19
-                },
-                {
-                  "name": "8:00 PM",
-                  "value": 20
-                },
-                {
-                  "name": "9:00 PM",
-                  "value": 21
-                },
-                {
-                  "name": "10:00 PM",
-                  "value": 22
-                },
-                {
-                  "name": "11:00 PM",
-                  "value": 23
-                }
-              ]
-            },
-            {
-              "name": "minute",
-              "description": "Local minute",
-              "type": "integer",
-              "required": true,
-              "min_value": 0,
-              "max_value": 59
-            },
-            {
-              "name": "date",
-              "description": "Day of month (defaults to today)",
-              "type": "integer",
-              "required": false,
-              "min_value": 1,
-              "max_value": 31
-            },
-            {
-              "name": "month",
-              "description": "Month (defaults to current)",
-              "type": "integer",
-              "required": false,
-              "min_value": 1,
-              "max_value": 12
-            },
-            {
-              "name": "year",
-              "description": "Year (defaults to current)",
-              "type": "integer",
-              "required": false,
-              "min_value": 1,
-              "max_value": 9999
-            },
-            {
-              "name": "timezone",
-              "description": "Timezone (defaults to your WoW signup timezone)",
-              "type": "string",
-              "required": false,
-              "choices": [
-                {
-                  "name": "Eastern",
-                  "value": "America/New_York"
-                },
-                {
-                  "name": "Central",
-                  "value": "America/Chicago"
-                },
-                {
-                  "name": "Mountain",
-                  "value": "America/Denver"
-                },
-                {
-                  "name": "Arizona",
-                  "value": "America/Phoenix"
-                },
-                {
-                  "name": "Pacific",
-                  "value": "America/Los_Angeles"
-                },
-                {
-                  "name": "Alaska",
-                  "value": "America/Anchorage"
-                }
-              ]
-            }
-          ],
           "subcommands": []
         },
         {
@@ -2334,7 +2149,7 @@
           "subcommands": []
         }
       ],
-      "details": "Manage weekly announcements and personal reminder subscriptions."
+      "details": "Manage weekly announcements and personal reminder subscriptions. Schedule ID suggestions show names and next occurrences, sorted soonest first and limited to schedules you can manage or unsubscribe from. Deleting a schedule posts a cancellation notice for its next occurrence."
     },
     {
       "path": "reminder",
@@ -3482,7 +3297,7 @@
       "path": "wow",
       "name": "/wow",
       "category": "World of Warcraft",
-      "description": "Find guild crafters and manage your primary crafting professions.",
+      "description": "Find guild crafters, manage professions, and track boss reroll needs.",
       "permission": "user",
       "availability": "Eternal Defiance",
       "server_keys": [
@@ -3520,6 +3335,21 @@
           "subcommands": []
         },
         {
+          "path": "wow/rerolls",
+          "name": "/wow rerolls",
+          "category": "World of Warcraft",
+          "description": "Create or refresh the pinned boss reroll tracker (admins).",
+          "permission": "user",
+          "availability": "Eternal Defiance",
+          "server_keys": [
+            "eternal-defiance"
+          ],
+          "type": "chat_input",
+          "options": [],
+          "subcommands": [],
+          "details": "Admins create or restore one pinned tracker per server. Players update their boss selections privately and request a private report with per-player update times."
+        },
+        {
           "path": "wow/help",
           "name": "/wow help",
           "category": "World of Warcraft",
@@ -3534,7 +3364,7 @@
           "subcommands": []
         }
       ],
-      "details": "Maintain a member-owned crafting directory using an interactive profession picker."
+      "details": "Maintain a crafting directory and a pinned boss reroll tracker with private updates and reports."
     },
     {
       "path": "help",

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_from": "v3.2.0",
+  "generated_from": "v3.3.1",
   "features": [
     {
       "key": "ambient-responses",
@@ -34,6 +34,61 @@
       "availability": "Configured channels and threads",
       "server_keys": [
         "the-boys"
+      ]
+    },
+    {
+      "key": "kingshot-arena-reminders",
+      "name": "Kingshot arena reminders",
+      "category": "Games",
+      "description": "Offers opt-in daily Arena reminders before reset.",
+      "details": "Use the Arena channel controls to receive a DM at 23:50 UTC, ten minutes before daily reset at 00:00 UTC, or to stop reminders.",
+      "availability": "Configured Discord destinations",
+      "server_keys": [
+        "all-installed-servers"
+      ]
+    },
+    {
+      "key": "kingshot-canonical-placements",
+      "name": "Kingshot canonical placements",
+      "category": "Games",
+      "description": "Maintains a color-coded map of canonical NAP bear-trap city destinations.",
+      "details": "Refreshes every six hours. The attached thread groups destination coordinates by trap and city name into game-chat-sized messages, including blockers and a suggested move order. Yellow destinations group non-rally players near the HQ, outside the trap buffers. Their moves join Step 1, with stable assignments and terrain checks.",
+      "availability": "Configured Discord destinations",
+      "server_keys": [
+        "all-installed-servers"
+      ]
+    },
+    {
+      "key": "kingshot-gathering-reminders",
+      "name": "Kingshot gathering reminders",
+      "category": "Games",
+      "description": "Offers opt-in daily alliance gathering-node rebuild reminders.",
+      "details": "Select Remind Me on the gathering reminder post for a daily DM at 00:15 UTC naming the node to rebuild: Great Mill (Bread), Great Sawmill (Wood), Great Quarry (Stone), then Great Iron Mine (Ore). Select Stop Reminders to opt out.",
+      "availability": "Configured Discord destinations",
+      "server_keys": [
+        "all-installed-servers"
+      ]
+    },
+    {
+      "key": "kingshot-gift-codes",
+      "name": "Kingshot gift codes",
+      "category": "Games",
+      "description": "Posts newly discovered active Kingshot gift codes from Kingshot.net.",
+      "details": "When enabled, a maintained parent message lists active codes, and individual announcements link to availability and redemption information. Previously unseen codes are announced; individual announcements are removed when codes leave the active list.",
+      "availability": "Configured Discord destinations",
+      "server_keys": [
+        "all-installed-servers"
+      ]
+    },
+    {
+      "key": "kingshot-limited-guides",
+      "name": "Kingshot limited guides",
+      "category": "Games",
+      "description": "Publishes temporary Kingshot event guides during their UTC event windows.",
+      "details": "Enabled destinations receive event scoring references, including Hall of Governors daily priorities. Guides are automatically removed after the event ends.",
+      "availability": "Configured Discord destinations",
+      "server_keys": [
+        "all-installed-servers"
       ]
     },
     {
